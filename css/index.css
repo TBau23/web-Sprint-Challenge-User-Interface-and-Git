@@ -18,7 +18,7 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 1px solid grey;
+	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -81,6 +81,11 @@ header nav {
 header nav a {
     text-decoration: none;
     color: black;
+    transition: 1s;
+}
+
+header nav a:hover {
+    text-decoration: underline;
 }
 
 .head-img {
@@ -205,22 +210,60 @@ footer nav {
 footer nav a {
     color: white;
     text-decoration: none;
+    transition: 1s;
 }
+
+footer nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* Specific for About page */
 
 .about-page .about-header {
     border-bottom: 1px dashed black ;
     margin-bottom: 3%;
 }
 
+.about-text {
+    padding: 2%;
+}
+
 .about-body {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .panel {
     display: flex;
     flex-direction: column;
     width: 45%;
+    margin-bottom: 3%;
+    line-height: 1.5;
+    border-bottom: 1px dashed black;
     
+}
+
+.panel img, .panel p, .panel button {
+    margin-bottom: 4%;
+}
+
+.panel button {
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid black;
+    width: 33%;
+    padding: 3%;
+    transition: 1s
+}
+
+.panel button:hover {
+    color: white;
+    background-color: black;
+}
+
+.together-text {
+    margin: 2% 0;
+    padding: 2%;
 }
